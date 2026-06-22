@@ -1,9 +1,4 @@
-node_modules/
 .git/
-.env
-.env.local
-*.md
-docs/
-scripts/
-frontend/dist/
+node_modules/
 frontend/node_modules/
+frontend/dist/
