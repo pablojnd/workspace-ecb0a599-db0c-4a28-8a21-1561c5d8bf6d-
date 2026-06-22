@@ -1,7 +1,7 @@
 import { corsHeaders } from '../_shared/cors.ts'
 import { calculatePrice, generateBreakdownRecords } from '../_shared/pricing.ts'
 
-Deno.serve(async (req) => {
+export default async function handler(req: Request): Promise<Response> {
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders })
   }
@@ -20,4 +20,8 @@ Deno.serve(async (req) => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     })
   }
-})
+}
+
+if (import.meta.main) {
+  Deno.serve(handler)
+}

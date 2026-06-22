@@ -1,0 +1,14 @@
+.git/
+node_modules/
+.next/
+docs/
+download/
+upload/
+tool-results/
+worklog.md
+*.md
+.env
+.eslint*
+postcss.config.*
+tailwind.config.*
+components.json
