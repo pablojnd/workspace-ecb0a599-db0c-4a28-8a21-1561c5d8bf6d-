@@ -2,12 +2,12 @@ import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import {
   fetchCatalog, getAvailableGlassOptions, getGlassPrice,
-  getRoundingMultiple, getLaborCost, createQuote, fetchQuotes, fetchQuote,
+  getRoundingMultiple, getLaborCost, createQuote,
 } from '@/lib/api'
 import { estimatePrice } from '@/lib/pricing'
 import type {
   CatalogData, ProductType, ProductLine, Color, GlassOption,
-  Accessory, ProfilePrice, QuoteItemInput, QuoteResponse,
+  Accessory, QuoteItemInput, QuoteResponse,
 } from '@/types'
 
 export interface SelectedAccessory {
